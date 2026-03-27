@@ -5,8 +5,8 @@ spring:
   datasource:
     url: jdbc:postgresql://localhost:5432/user_service
     driver-class-name: org.postgresql.Driver
-    username: your_username
-    password: your_password
+    username: postgrace
+    password: root
 
   jpa:
     database-platform: org.hibernate.dialect.PostgreSQLDialect
