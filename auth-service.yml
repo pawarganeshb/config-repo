@@ -1,0 +1,11 @@
+server:
+  port: 8081
+
+spring:
+  security:
+    user:
+      name: admin
+      password: password
+
+jwt:
+  secret: your-very-very-long-and-secure-secret-key-that-is-at-least-32-bytes

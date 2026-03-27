@@ -1,0 +1,26 @@
+server:
+  port: 8989
+
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: user-service
+          uri: lb://user-service
+          predicates:
+            - Path=/api/user/**,/users/**
+        - id: post-service
+          uri: lb://post-service
+          predicates:
+            - Path=/api/post/**
+        - id: notification-service
+          uri: lb://notification-service
+          predicates:
+            - Path=/api/notification/**
+        - id: auth-service
+          uri: lb://auth-service
+          predicates:
+            - Path=/api/auth/**
+
+jwt:
+  secret: your-very-very-long-and-secure-secret-key-that-is-at-least-32-bytes

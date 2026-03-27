@@ -1,0 +1,7 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
+jwt:
+  secret: your-very-very-long-and-secure-secret-key-that-is-at-least-32-bytes
